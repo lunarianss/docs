@@ -183,7 +183,7 @@
   },
   "servers": [
     {
-      "url": "https://www.baidu.com",
+      "url": "http://120.78.6.109:3001",
       "description": "开发服务器"
     }
   ]
