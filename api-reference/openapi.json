@@ -54,6 +54,48 @@
         }
       }
     },
+    "/": {
+      "get": {
+        "summary": "百度",
+        "operationId": "setCookie",
+        "description": "设置特定的 Cookie 值",
+        "tags": ["Cookie 操作"],
+        "parameters": [
+          {
+            "name": "num",
+            "in": "query",
+            "description": "数字参数",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 13,
+              "enum": [11, 12, 13]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Cookie 设置成功",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": {
+                      "type": "boolean"
+                    },
+                    "message": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/check-cookie": {
       "get": {
         "summary": "检查 Cookie",
@@ -141,7 +183,7 @@
   },
   "servers": [
     {
-      "url": "http://120.78.6.109:3001",
+      "url": "https://www.baidu.com",
       "description": "开发服务器"
     }
   ]
