@@ -62,7 +62,7 @@
             "pages": [
               "GET /set-cookie",
               "GET /check-cookie",
-              "GET /"
+              "GET /cookie"
             ]
           },
           {

@@ -54,9 +54,9 @@
         }
       }
     },
-    "/": {
+    "/cookie": {
       "get": {
-        "summary": "百度",
+        "summary": "存在cookie表单",
         "operationId": "setCookie",
         "description": "设置特定的 Cookie 值",
         "tags": ["Cookie 操作"],
@@ -71,6 +71,13 @@
               "format": "int32",
               "default": 13,
               "enum": [11, 12, 13]
+            }
+          },{
+            "name": "Cookie",
+            "in": "header",
+            "description": "cookie",
+            "schema": {
+              "type": "string"
             }
           }
         ],
