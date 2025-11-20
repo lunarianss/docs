@@ -10,7 +10,7 @@
   },
   "servers": [
     {
-      "url": "https://www.baidu.com"
+      "url": "http://120.78.6.109"
     }
   ],
   "security": [
@@ -19,7 +19,7 @@
     }
   ],
   "paths": {
-    "/plants": {
+    "/check-cookie": {
       "get": {
         "description": "Returns all plants from the system that the user has access to",
         "parameters": [
@@ -96,7 +96,7 @@
         }
       }
     },
-    "/plants/{id}": {
+    "set-cookie": {
       "delete": {
         "description": "Deletes a single plant based on the ID supplied",
         "parameters": [
