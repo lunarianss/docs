@@ -1,154 +1,148 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "默认模块",
-    "description": "This is a sample server Petstore server.  You can find out more about Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).  For this sample, you can use the api key `special-key` to test the authorization filters.",
+    "title": "Cookie 管理 API",
+    "description": "用于设置、检查和清除 Cookie 的 API 接口",
     "version": "1.0.0"
   },
   "tags": [
     {
-      "name": "各种 Body 类别 测试"
+      "name": "Cookie 操作",
+      "description": "Cookie 相关的各种操作"
     }
   ],
   "paths": {
     "/set-cookie": {
       "get": {
-        "summary": "set-cookie",
-        "deprecated": false,
-        "description": "",
-        "tags": [
-          "各种 Body 类别 测试"
-        ],
+        "summary": "设置 Cookie",
+        "operationId": "setCookie",
+        "description": "设置特定的 Cookie 值",
+        "tags": ["Cookie 操作"],
         "parameters": [
           {
             "name": "num",
             "in": "query",
-            "description": "",
-            "example": 13,
+            "description": "数字参数",
+            "required": false,
             "schema": {
               "type": "integer",
-              "default": "13",
-              "format": "uint32",
-              "enum": [
-                11,
-                12
-              ],
-              "example": 444
+              "format": "int32",
+              "default": 13,
+              "enum": [11, 12, 13]
             }
           }
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Cookie 设置成功",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "properties": {}
+                  "properties": {
+                    "success": {
+                      "type": "boolean"
+                    },
+                    "message": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
-            },
-            "headers": {}
+            }
           }
-        },
-        "security": []
+        }
       }
     },
     "/check-cookie": {
       "get": {
-        "summary": "get-cookie",
-        "deprecated": false,
-        "description": "",
-        "tags": [
-          "各种 Body 类别 测试"
-        ],
+        "summary": "检查 Cookie",
+        "operationId": "checkCookie",
+        "description": "检查当前 Cookie 值",
+        "tags": ["Cookie 操作"],
         "parameters": [
           {
             "name": "num",
             "in": "query",
-            "description": "",
-            "example": 13,
+            "description": "数字参数",
+            "required": false,
             "schema": {
               "type": "integer",
-              "default": "13",
-              "format": "uint32",
-              "enum": [
-                11,
-                12
-              ],
-              "example": 444
+              "format": "int32",
+              "default": 13,
+              "enum": [11, 12, 13]
             }
           }
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Cookie 检查成功",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "properties": {}
+                  "properties": {
+                    "exists": {
+                      "type": "boolean"
+                    },
+                    "value": {
+                      "type": "integer"
+                    }
+                  }
                 }
               }
-            },
-            "headers": {}
+            }
           }
-        },
-        "security": []
+        }
       }
     },
     "/clear-cookie": {
       "get": {
-        "summary": "clear-cookie",
-        "deprecated": false,
-        "description": "",
-        "tags": [
-          "各种 Body 类别 测试"
-        ],
+        "summary": "清除 Cookie",
+        "operationId": "clearCookie",
+        "description": "清除当前的 Cookie",
+        "tags": ["Cookie 操作"],
         "parameters": [
           {
             "name": "num",
             "in": "query",
-            "description": "",
-            "example": 13,
+            "description": "数字参数",
+            "required": false,
             "schema": {
               "type": "integer",
-              "default": "13",
-              "format": "uint32",
-              "enum": [
-                11,
-                12
-              ],
-              "example": 444
+              "format": "int32",
+              "default": 13,
+              "enum": [11, 12, 13]
             }
           }
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Cookie 清除成功",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "properties": {}
+                  "properties": {
+                    "success": {
+                      "type": "boolean"
+                    },
+                    "message": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
-            },
-            "headers": {}
+            }
           }
-        },
-        "security": []
+        }
       }
     }
   },
-  "components": {
-    "schemas": {},
-    "securitySchemes": {}
-  },
   "servers": [
     {
-      "url": "http://120.78.6.109:3001"
+      "url": "http://120.78.6.109:3001",
+      "description": "开发服务器"
     }
-  ],
-  "security": []
+  ]
 }
