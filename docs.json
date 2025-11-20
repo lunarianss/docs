@@ -61,7 +61,8 @@
             "openapi": "api-reference/openapi.json",
             "pages": [
               "GET /set-cookie",
-              "GET /check-cookie"
+              "GET /check-cookie",
+              "GET /"
             ]
           },
           {
