@@ -72,10 +72,39 @@
               "default": 13,
               "enum": [11, 12, 13]
             }
-          },{
-            "name": "Cookie",
-            "in": "header",
-            "description": "cookie",
+          },          
+          {
+            "name": "sss",
+            "in": "cookie",
+            "description": "",
+            "required": false,
+            "example": "sds",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sdfsdf",
+            "in": "cookie",
+            "description": "",
+            "required": false,
+            "example": [
+              "sdf",
+              "sdf"
+            ],
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "name": "sdfsd",
+            "in": "cookie",
+            "description": "",
+            "required": false,
+            "example": "ss",
             "schema": {
               "type": "string"
             }
