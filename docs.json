@@ -57,6 +57,14 @@
             ]
           },
           {
+            "group": "API reference",
+            "openapi": "api-reference/openapi.json",
+            "pages": [
+              "GET /set-cookie",
+              "GET /check-cookie"
+            ]
+          },
+          {
             "group": "Endpoint examples",
             "pages": [
               "api-reference/endpoint/get",
